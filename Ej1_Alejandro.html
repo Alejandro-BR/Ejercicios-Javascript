@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Alejandro Barrionuevo Rosado -->
+  
+  <!-- Calcula el área y el perímetro de un rectángulo usando una clase Rectángulo donde tenga
+  la función calculaArea y la función calculaPerímetro y la función resultadofinal. 
+  El formulario de entrada debe tener, como mínimo este aspecto: -->
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1</title>
+  <script>
+    function calculoArea(){
+      let n1, n2, area;
+      n1 = parseFloat(document.calculadora.valor1.value);
+      n2 = parseFloat(document.calculadora.valor2.value);
+
+      area = n1 * n2;
+
+      return area;
+
+    }
+
+    function calculoPerimetro(){
+      let n1, n2, perimetro;
+      n1 = parseFloat(document.calculadora.valor1.value);
+      n2 = parseFloat(document.calculadora.valor2.value);
+
+      perimetro = (n1 * 2) + (n2 * 2);
+
+      return perimetro;
+
+    }
+
+    function resultadofinal(){
+      let n1, n2;
+      let area = calculoArea();
+      let perimetro = calculoPerimetro();
+
+      n1 = parseFloat(document.calculadora.valor1.value);
+      n2 = parseFloat(document.calculadora.valor2.value);
+
+      document.write('<h1>Calculo Area y perimetro rectangulo</h1>');
+      document.write('Escribe Base: ' + n1 + '  Escribe Altura: ' + n2 + '<br>')
+      document.write('El area es ' + area + ' y el perimetro es ' + perimetro + '<br>');
+    }
+
+  </script>
+</head>
+<body>
+  <h1>Calculo Area y perimetro rectangulo</h1>
+  <form name="calculadora">
+    Escribe Base: <input type="text" name="valor1" size="1"> 
+    Escribe Altura: <input type="text" name="valor2" size="1"> 
+
+    <input type="button" name="button1" value="Calcula" onclick="resultadofinal()">
+    <br>
+  </form>
+</body>
+</html>
