@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Alejandro Barrionuevo Rosado -->
+
+<!-- Crear programa, donde el usuario introduce su altura (cm), edad, sexo y peso actual. 
+  El programa responde con el peso ideal.
+  Por ejemplo: usuario introduce 176, 22, H, 79.
+  El programa ejecuta la fórmula: 50 + ((Altura-150) / 4) *3 + (Edad – 20) /4 * (0.9 si es mujer)
+  El resultado es: peso ideal = 70,5.KG
+  Los datos se introducirán mediante prompts, tal y como se muestran: -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2</title>
+  <style>
+    h2 {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function llamarPrompts() {
+      let res, altura, edad, sexo, dato1, dato2, dato3;
+
+      dato1 = window.prompt("Digame su altura en cm ");
+      altura = parseInt(dato1);
+
+      dato2 = window.prompt("Digame su edad en años");
+      edad = parseInt(dato2);
+
+      dato3 = window.prompt("Digame su sexo, hombre = h o mujer = m");
+      sexo = parseInt(dato3);
+
+      if(n4 == "h"){
+        res =  50 + ((n1 - 150) / 4)*3 + (n3 - 20)/4;
+      } else if (n4 == "m"){
+        res =  (50 + ((n1 - 150) / 4)*3 + (n3 - 20)/4) * 0.9;
+      }
+
+      alert("Su peso ideal es " + res + " Kg");
+    }
+  </script>
+
+  <h2>Pantalla inicial</h2>
+  <hr>
+  <form>
+    <input type="button" name="button1" value="Coprueba tu peso ideal" onclick="llamarPrompts()">
+  </form>
+
+</body>
+
+</html>
