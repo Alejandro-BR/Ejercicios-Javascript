@@ -27,7 +27,7 @@ seleccionándola dentro de un array de letras.  -->
     numero = parseInt(dato1);
 
     if ((numero > 0) && (numero < 99999999)) {
-      division = numero / 23;
+      division = numero % 23;
       letraDNI = letras[division];
 
       letraIntroducida = window.prompt("Introduce la letra de tu DNI");
