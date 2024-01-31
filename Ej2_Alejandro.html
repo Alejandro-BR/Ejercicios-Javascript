@@ -32,12 +32,12 @@
       edad = parseInt(dato2);
 
       dato3 = window.prompt("Digame su sexo, hombre = h o mujer = m");
-      sexo = parseInt(dato3);
+      sexo = dato3;
 
-      if(n4 == "h"){
-        res =  50 + ((n1 - 150) / 4)*3 + (n3 - 20)/4;
-      } else if (n4 == "m"){
-        res =  (50 + ((n1 - 150) / 4)*3 + (n3 - 20)/4) * 0.9;
+      if(sexo == "h"){
+        res = ( 50 + ((altura - 150) / 4)*3 + (edad - 20)/4);
+      } else if (sexo == "m"){
+        res = ((50 + ((altura - 150) / 4)*3 + (edad - 20)/4) * 0.9);
       }
 
       alert("Su peso ideal es " + res + " Kg");
