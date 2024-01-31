@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Alejandro Barrionuevo Rosado -->
+
+<!-- Crear programa, que leerá el valor desde una caja de texto de un formulario y tras
+dar al botón de calcula nos ofrecerá la tabla de multiplicar de ese número
+introducido previamente. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4</title>
+  <script>
+    function calcularTablas(){
+      let numero;
+      let resultado = document.getElementById('resultado'); 
+
+      numero = parseInt(document.tablas.valor1.value);
+
+      resultado.innerHTML = '<br> Tabla de multiplicar del ' + numero + ': <br> <br>'; 
+      //Se utiliza este formato para asi no borrar el programa entero como pasaba en el ejercicio 1 
+
+      for (let index = 1; index <= 10; index++) {
+        resultado.innerHTML += index + ' x ' + numero + ' = ' + (index * numero) + ' <br>'; //Se le añade + delante del = para no sobrescribir
+      }
+      
+    }
+  </script>
+</head>
+<body>
+    <form name="tablas">
+      Introduce el numero al que quieres realizar la tabla de multiplicar: <input type="text" name="valor1"> <br>
+      <input type="button" name="button1" value="Calcular" onclick="calcularTablas()">
+    </form>
+
+    <div id="resultado"></div>
+</body>
+
+</html>
