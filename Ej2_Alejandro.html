@@ -18,9 +18,6 @@
       color: blue;
     }
   </style>
-</head>
-
-<body>
   <script>
     function llamarPrompts() {
       let res, altura, edad, sexo, dato1, dato2, dato3;
@@ -34,15 +31,18 @@
       dato3 = window.prompt("Digame su sexo, hombre = h o mujer = m");
       sexo = dato3;
 
-      if(sexo == "h"){
-        res = ( 50 + ((altura - 150) / 4)*3 + (edad - 20)/4);
-      } else if (sexo == "m"){
-        res = ((50 + ((altura - 150) / 4)*3 + (edad - 20)/4) * 0.9);
+      if (sexo == "h") {
+        res = (50 + ((altura - 150) / 4) * 3 + (edad - 20) / 4);
+      } else if (sexo == "m") {
+        res = ((50 + ((altura - 150) / 4) * 3 + (edad - 20) / 4) * 0.9);
       }
 
       alert("Su peso ideal es " + res + " Kg");
     }
   </script>
+</head>
+
+<body>
 
   <h2>Pantalla inicial</h2>
   <hr>

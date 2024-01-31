@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Alejandro Barrionuevo Rosado -->
+
+<!-- Crear programa, que realice la evaluación de la fórmula matemática expresada en
+la casilla de recogida de datos y muestre su resultado en la casilla de Respuesta.
+Tendrías que usar la función eval() que es propia de Javascript. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3</title>
+  <script>
+    //Calcular
+    function calcular(){
+      let formula, resultado;
+
+      formula = document.forms.calculadora.valor1.value;
+      resultado = eval(formula);  // eval() funcion propia de js
+
+      document.forms.calculadora.resultado.value = resultado;
+    }
+
+    //Comando para refrescar una pagina web
+    let refresh = document.getElementById('Reset');
+    refresh.addEventListener('click', _ => { location.reload(); })
+
+  </script>
+</head>
+
+<body>
+  <form name="calculadora">
+    Escribe una formula matemática, por ejemplo: (2+3)*10 <input type="text" name="valor1">
+    <input type="button" name="button1" value="Calcular" onclick="calcular()">
+    <br>
+    Respuesta: <input type="text" name="resultado">
+    <br>
+    <button id="refresh">Reset</button>
+  </form>
+</body>
+
+</html>
